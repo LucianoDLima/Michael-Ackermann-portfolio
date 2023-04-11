@@ -1,0 +1,40 @@
+@use '../../styleVariables/_spacing' as *;
+@use '../../styleVariables/_color' as *;
+@use '../../styleVariables/_animation' as *;
+@use '../../styleVariables/_typography' as *;
+
+.page-navigation {
+  padding-top: map-get($med-gaps, '300');
+  display: inline-block;
+  color: map-get($ui-colors, 'secondary-text');
+  font-weight: map-get($font-weight, 'normal');
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: map-get($min-gaps, '300');
+    margin-bottom: map-get($min-gaps, '800');
+    cursor: pointer;
+
+    .page-navigation__icon {
+      width: 35px;
+      height: 35px;
+      background-size: cover !important;
+      background-position: center !important;
+      filter: map-get($ui-colors, 'svg-primary');
+    }
+
+    a {
+      transition: all map-get($speed, 'fast') ease-in-out;
+    }
+
+    &:hover > a {
+      color: map-get($ui-colors, 'primary-text');
+      font-weight: map-get($font-weight, 'semi-bold');
+    }
+
+    &:hover > .page-navigation__icon {
+      filter: map-get($ui-colors, 'svg-accent');
+    }
+  }
+}

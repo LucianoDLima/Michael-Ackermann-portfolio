@@ -1,0 +1,34 @@
+@use '../../styleVariables/_spacing' as *;
+@use '../../styleVariables/_typography' as *;
+@use '../../styleVariables/_color' as *;
+
+
+.profile {
+  padding-top: map-get($min-gaps, '500');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: map-get($min-gaps, '500');
+
+  &__img-container {
+    width: 7.813rem;
+    height: 7.813rem;
+    border-radius: 50%;
+    border: map-get($min-gaps, '100') solid map-get($ui-colors, 'secondary-background');
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      position: relative;
+      left: -35px;
+      top: -21px;
+      width: 150%;
+      height: 150%;
+    }
+  }
+
+  h2 {
+    font-size: map-get($font-sizes, 'lg');
+    text-align: center;
+  }
+}

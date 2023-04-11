@@ -1,0 +1,33 @@
+@use '../../styleVariables/_spacing' as *;
+@use '../../styleVariables/_color' as *;
+@use '../../styleVariables/_animation' as *;
+
+.social-media {
+  padding-top: map-get($min-gaps, '500');
+  display: flex;
+  justify-content: center;
+  gap: map-get($min-gaps, '100');
+
+  li > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: map-get($ui-colors, 'secondary-background');
+    position: relative;
+    cursor: pointer;
+    transition: all map-get($speed, 'fast') ease-in-out;
+    
+    img {
+      width: 60%;
+    }
+
+    &:hover {
+      background-color: map-get($ui-colors, 'accent');
+    }
+  }
+
+  
+}

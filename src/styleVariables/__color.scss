@@ -1,0 +1,21 @@
+$dark-blue: hsl(231, 67%, 5%);
+$gray-blue: hsl(231, 18%, 21%);
+$light-gray-blue: hsl(231, 7%, 68%);
+$light-blue: hsl(199, 83%, 47%);
+$white: hsl(0, 0%, 100%);
+
+// Color for the svgs
+$filter-lighter-gray-blue: invert(71%) sepia(0%) saturate(7216%)
+  hue-rotate(325deg) brightness(93%) contrast(106%);
+$filter-light-blue: invert(59%) sepia(54%) saturate(4704%) hue-rotate(167deg)
+  brightness(94%) contrast(85%);
+
+$ui-colors: (
+  'primary-background': $dark-blue,
+  'secondary-background': $gray-blue,
+  'primary-text': $white,
+  'secondary-text': $light-gray-blue,
+  'accent': $light-blue,
+  'svg-primary': $filter-lighter-gray-blue,
+  'svg-accent': $filter-light-blue
+);

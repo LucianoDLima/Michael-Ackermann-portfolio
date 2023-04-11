@@ -1,0 +1,16 @@
+@use '../../styleVariables/_spacing' as *;
+@use '../../styleVariables/_color' as *;
+@forward '../../components/ProfileContainer/_profileContainer';
+@forward '../../components/NavigationItems/_navigationItems';
+@forward '../../components/SocialMedias/_socialMedias';
+
+header {
+  position: fixed;
+  height: 100vh;
+  width: 18.75rem;
+  background-color: map-get($ui-colors, 'primary-background');
+  color: map-get($ui-colors, 'primary-text');
+  padding-inline: map-get($min-gaps, '900' );
+  overflow-y: auto;
+  z-index: 10;
+}

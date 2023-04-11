@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+body {
+  font-family: "open sans";
+}
+
+.profile {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.profile__img-container {
+  width: 7.813rem;
+  height: 7.813rem;
+  border-radius: 50%;
+  border: 0.375rem solid hsl(231deg, 18%, 21%);
+  overflow: hidden;
+}
+.profile__img-container img {
+  object-fit: cover;
+  position: relative;
+  left: -35px;
+  top: -21px;
+  width: 150%;
+  height: 150%;
+}
+.profile h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.page-navigation {
+  padding-top: 3rem;
+  display: inline-block;
+  color: hsl(231deg, 7%, 68%);
+  font-weight: 400;
+}
+.page-navigation li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1.75rem;
+  cursor: pointer;
+}
+.page-navigation li .page-navigation__icon {
+  width: 35px;
+  height: 35px;
+  background-size: cover !important;
+  background-position: center !important;
+  filter: invert(71%) sepia(0%) saturate(7216%) hue-rotate(325deg) brightness(93%) contrast(106%);
+}
+.page-navigation li a {
+  transition: all 175ms ease-in-out;
+}
+.page-navigation li:hover > a {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+}
+.page-navigation li:hover > .page-navigation__icon {
+  filter: invert(59%) sepia(54%) saturate(4704%) hue-rotate(167deg) brightness(94%) contrast(85%);
+}
+
+.social-media {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.375rem;
+}
+.social-media li > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: hsl(231deg, 18%, 21%);
+  position: relative;
+  cursor: pointer;
+  transition: all 175ms ease-in-out;
+}
+.social-media li > div img {
+  width: 60%;
+}
+.social-media li > div:hover {
+  background-color: hsl(199deg, 83%, 47%);
+}
+
+header {
+  position: fixed;
+  height: 100vh;
+  width: 18.75rem;
+  background-color: hsl(231deg, 67%, 5%);
+  color: hsl(0deg, 0%, 100%);
+  padding-inline: 2rem;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+/*# sourceMappingURL=main.css.map */

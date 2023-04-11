@@ -9,11 +9,16 @@
   color: map-get($ui-colors, 'secondary-text');
   font-weight: map-get($font-weight, 'normal');
 
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($min-gaps, '600');
+  }
+
   li {
     display: flex;
     align-items: center;
-    gap: map-get($min-gaps, '300');
-    margin-bottom: map-get($min-gaps, '800');
+    gap: map-get($min-gaps, '200');
     cursor: pointer;
 
     .page-navigation__icon {

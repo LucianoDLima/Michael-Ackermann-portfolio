@@ -10,10 +10,17 @@ interface SocialMediaList {
 }
 
 const SocialMedias = () => {
-
+  // Opens a new tab directing to the link
   const directToLink = (link: string): void => {
     window.open(link, '_blank');
-  }
+  };
+
+  // Same as above, except it's when you press Enter instead of clicking
+  const directToLinkOnKeyDown = (e: React.KeyboardEvent, link: string) => {
+    if (e.key === 'Enter') {
+      directToLink(link);
+    }
+  };
 
   const socialMediaList: SocialMediaList[] = [
     {
@@ -33,15 +40,21 @@ const SocialMedias = () => {
     },
   ];
 
-  const socialMediaRender: JSX.Element[] = socialMediaList.map((sm: SocialMediaList) => {
-    return (
-      <li key={sm.name}>
-        <div onClick={() => directToLink(sm.link)}>
-          <img src={sm.image} />
-        </div>
-      </li>
-    );
-  });
+  const socialMediaRender: JSX.Element[] = socialMediaList.map(
+    (sm: SocialMediaList) => {
+      return (
+        <li
+          key={sm.name}
+          tabIndex={0}
+          onKeyDown={(e) => directToLinkOnKeyDown(e, sm.link)}
+        >
+          <div onClick={() => directToLink(sm.link)}>
+            <img src={sm.image} />
+          </div>
+        </li>
+      );
+    }
+  );
 
   return <ul className="social-media">{socialMediaRender}</ul>;
 };

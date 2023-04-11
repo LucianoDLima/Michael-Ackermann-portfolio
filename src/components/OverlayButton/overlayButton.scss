@@ -1,12 +1,13 @@
 @use '../../styleVariables/_color' as *;
 @use '../../styleVariables/_animation' as *;
+@use '../../styleVariables/_spacing' as *;
 
 // General button style
 .overlay-button {
   position: absolute;
   right: 2%;
-  width: 40px;
-  height: 40px;
+  width: map-get($med-gaps, '100');
+  height: map-get($med-gaps, '100');
   border-radius: 50%;
   background-color: map-get($ui-colors, 'accent');
   border: none;
@@ -16,6 +17,52 @@
 // The top hamburguer button that hides the navigation bar on the left
 .menu-button {
   top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  // Hamburguer illustration
+  span {
+    display: flex;
+    width: map-get($min-gaps, '600');
+    height: 0.188rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: map-get($min-gaps, '000');
+    transition: all map-get($speed, 'fast') ease-in-out;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: map-get($min-gaps, '600');
+      height: 0.188rem;
+      background-color: white;
+      border-radius: map-get($min-gaps, '000');
+      transition: all map-get($speed, 'fast') ease-in-out;
+    }
+
+    &::before {
+      transform: translateY(map-get($min-gaps, '100') - (map-get($min-gaps, '100') * 2));
+    }
+    &::after {
+      transform: translateY(map-get($min-gaps, '100'));
+    }
+  }
+
+  // Animation to make the X if it has the below class
+
+  &.open span {
+    background-color: map-get($ui-colors, 'accent');
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 // The bottom button pointing up that takes you back to the top

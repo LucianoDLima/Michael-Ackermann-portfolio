@@ -3,16 +3,17 @@ import ProfileContainer from '../../components/ProfileContainer/ProfileContainer
 import NavigationItems from '../../components/NavigationItems/NavigationItems'
 import SocialMedias from '../../components/SocialMedias/SocialMedias'
 
-interface NavigationProps {
+interface Props {
   navBarHide: string
+  tabIndex: number
 }
 
-const Navbar = ({navBarHide}: NavigationProps) => {
+const Navbar = ({navBarHide, tabIndex}: Props) => {
   return (
     <header className={navBarHide}>
       <ProfileContainer />
-      <SocialMedias />
-      <NavigationItems />
+      <SocialMedias tabIndex={tabIndex}/>
+      <NavigationItems tabIndex={tabIndex} />
     </header> 
   )
 }

@@ -1,23 +1,30 @@
-import { useState } from 'react'
-import Navbar from './pages/Navbar/Navbar'
-import OverlayButton from './components/OverlayButton/OverlayButton'
-import ArrowIcon from './assets/images/arrow-icon.svg'
+import { useState } from 'react';
+import Navbar from './pages/Navbar/Navbar';
+import OverlayButton from './components/OverlayButton/OverlayButton';
+import ArrowIcon from './assets/images/arrow-icon.svg';
 
 function App() {
-  const [isNavbarHidden, setIsNavbarHidden] = useState(false)
-  
+  const [isNavbarHidden, setIsNavbarHidden] = useState(false);
+
   const hideNavigationBar = (): void => {
-    setIsNavbarHidden(prevState => !prevState)
-  }
+    setIsNavbarHidden((prevState) => !prevState);
+  };
 
   return (
     <>
-      <OverlayButton btnType='menu-button' onClick={() => hideNavigationBar()}/>
-      <OverlayButton btnType={`back-to-top visible`} icon={ArrowIcon}/>
+      <OverlayButton
+        btnType="menu-button"
+        active={isNavbarHidden ? 'open' : ''}
+        onClick={() => hideNavigationBar()}
+      />
+      <OverlayButton btnType={`back-to-top visible`} icon={ArrowIcon} />
 
-      <Navbar navBarHide={isNavbarHidden ? 'hide' : ''}/>
+      <Navbar
+        navBarHide={isNavbarHidden ? 'hide' : ''}
+        tabIndex={isNavbarHidden ? -1 : 0}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

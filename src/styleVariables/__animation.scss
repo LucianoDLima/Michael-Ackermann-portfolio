@@ -7,13 +7,13 @@ $speed: (
   'slow': 1000ms,
 );
 
-// Up and Down
+// Up and Down animation
 @keyframes moveUpDown {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-.313rem);
   }
   100% {
     transform: translateY(0);

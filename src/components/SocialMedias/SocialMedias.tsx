@@ -9,14 +9,18 @@ interface SocialMediaList {
   link: string;
 }
 
-const SocialMedias = () => {
+interface Props {
+  tabIndex: number
+}
+
+const SocialMedias = ({tabIndex}: Props) => {
   // Opens a new tab directing to the link
   const directToLink = (link: string): void => {
     window.open(link, '_blank');
   };
 
   // Same as above, except it's when you press Enter instead of clicking
-  const directToLinkOnKeyDown = (e: React.KeyboardEvent, link: string) => {
+  const directToLinkOnKeyDown = (e: React.KeyboardEvent, link: string): void => {
     if (e.key === 'Enter') {
       directToLink(link);
     }
@@ -45,7 +49,7 @@ const SocialMedias = () => {
       return (
         <li
           key={sm.name}
-          tabIndex={0}
+          tabIndex={tabIndex}
           onKeyDown={(e) => directToLinkOnKeyDown(e, sm.link)}
         >
           <div onClick={() => directToLink(sm.link)}>

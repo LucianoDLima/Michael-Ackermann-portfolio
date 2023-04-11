@@ -10,7 +10,11 @@ interface Pages {
   icon: string,
 }
 
-const NavigationItems = () => {
+interface Props {
+  tabIndex: number
+}
+
+const NavigationItems = ({tabIndex}: Props) => {
 
   const pages: Pages[] = [
     {
@@ -38,7 +42,7 @@ const NavigationItems = () => {
 
   const pagesRender: JSX.Element[] = pages.map((page: Pages) => {
     return (
-      <li key={page.page} tabIndex={0}>
+      <li key={page.page} tabIndex={tabIndex}>
         <div className='page-navigation__icon' style={{background: `url('${page.icon}')`}}/>
         <a>{page.page}</a>
       </li>

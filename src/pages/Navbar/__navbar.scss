@@ -1,5 +1,6 @@
 @use '../../styleVariables/_spacing' as *;
 @use '../../styleVariables/_color' as *;
+@use '../../styleVariables/_animation' as *;
 @forward '../../components/ProfileContainer/_profileContainer';
 @forward '../../components/NavigationItems/_navigationItems';
 @forward '../../components/SocialMedias/_socialMedias';
@@ -13,4 +14,9 @@ header {
   padding-inline: map-get($min-gaps, '900' );
   overflow-y: auto;
   z-index: 10;
+  transition: map-get($speed, 'medium-fast');
+
+  &.hide {
+    transform: translateX(-18.75rem);
+  }
 }

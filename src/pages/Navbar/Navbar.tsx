@@ -3,14 +3,17 @@ import ProfileContainer from '../../components/ProfileContainer/ProfileContainer
 import NavigationItems from '../../components/NavigationItems/NavigationItems'
 import SocialMedias from '../../components/SocialMedias/SocialMedias'
 
+interface NavigationProps {
+  navBarHide: string
+}
 
-const Navbar = () => {
+const Navbar = ({navBarHide}: NavigationProps) => {
   return (
-    <header>
+    <header className={navBarHide}>
       <ProfileContainer />
       <SocialMedias />
       <NavigationItems />
-    </header>
+    </header> 
   )
 }
 

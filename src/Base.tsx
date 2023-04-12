@@ -3,13 +3,15 @@ import Navbar from './pages/Navbar/Navbar';
 import OverlayButton from './components/OverlayButton/OverlayButton';
 import ArrowIcon from './assets/images/arrow-icon.svg';
 import { screenSize } from './data/ScreenSize';
+import Home from './pages/Home/Home';
+import MainWrapper from './components/MainWrapper/MainWrapper';
 
-function App() {
+function Base() {
   const [isNavbarHidden, setIsNavbarHidden] = useState(
     window.innerWidth < screenSize
   );
 
-  // This hook automatically hides the navigation bar when the screen is too big 
+  // This hook automatically hides the navigation bar when the screen is too big
   // to display everything, overlap or make it too squished
   useEffect(() => {
     // Save the original screen width when the page loads
@@ -36,6 +38,7 @@ function App() {
     };
   }, []);
 
+  // For the button, it hides/shows the navigation bar as you click it
   const hideNavigationBar = (): void => {
     setIsNavbarHidden((prevState) => !prevState);
   };
@@ -53,8 +56,14 @@ function App() {
         navBarHide={isNavbarHidden ? 'hide' : ''}
         tabIndex={isNavbarHidden ? -1 : 0}
       />
+      <MainWrapper
+        shrinkWithNavbar={
+          window.innerWidth < screenSize ? '' : isNavbarHidden ? '' : 'shrink'
+        }
+        children={<Home />}
+      />
     </>
   );
 }
 
-export default App;
+export default Base;

@@ -1,4 +1,3 @@
-import React from 'react';
 import MichaelPP from '../../assets/images/michael-pp.jpg'
 
 const ProfileContainer = () => {

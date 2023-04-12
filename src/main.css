@@ -135,6 +135,7 @@ header.hide {
   background-color: hsl(199deg, 83%, 47%);
   border: none;
   cursor: pointer;
+  z-index: 100;
 }
 
 .menu-button {
@@ -193,6 +194,15 @@ header.hide {
 }
 .back-to-top:hover img.moveUpDown {
   animation: moveUpDown 2000ms infinite ease-out;
+}
+
+.mainWrapper {
+  transition: 350ms;
+  width: 100%;
+}
+.mainWrapper.shrink {
+  width: calc(100% - 18.75rem);
+  transform: translateX(18.75rem);
 }
 
 /*# sourceMappingURL=main.css.map */

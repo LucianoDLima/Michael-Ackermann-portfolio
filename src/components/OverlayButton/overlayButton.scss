@@ -12,6 +12,7 @@
   background-color: map-get($ui-colors, 'accent');
   border: none;
   cursor: pointer;
+  z-index: 100;
 }
 
 // The top hamburguer button that hides the navigation bar on the left

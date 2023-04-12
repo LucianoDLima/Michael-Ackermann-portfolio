@@ -1,0 +1,12 @@
+@use '../../styleVariables/_spacing' as *;
+@use '../../styleVariables/_animation' as *;
+
+.mainWrapper {
+  transition: map-get($speed, 'medium-fast');
+  width: 100%;
+
+  &.shrink {
+    width: calc(100% - map-get($component-sizes, 'navigation-bar'));
+    transform: translateX(map-get($component-sizes, 'navigation-bar'));
+  }
+}

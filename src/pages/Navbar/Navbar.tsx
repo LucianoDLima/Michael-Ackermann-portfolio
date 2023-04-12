@@ -1,4 +1,3 @@
-import React from 'react'
 import ProfileContainer from '../../components/ProfileContainer/ProfileContainer'
 import NavigationItems from '../../components/NavigationItems/NavigationItems'
 import SocialMedias from '../../components/SocialMedias/SocialMedias'

@@ -8,7 +8,7 @@
 header {
   position: fixed;
   height: 100vh;
-  width: 18.75rem;
+  width: map-get($component-sizes, 'navigation-bar');
   background-color: map-get($ui-colors, 'primary-background');
   color: map-get($ui-colors, 'primary-text');
   padding-inline: map-get($min-gaps, '900' );
@@ -17,6 +17,7 @@ header {
   transition: map-get($speed, 'medium-fast');
 
   &.hide {
-    transform: translateX(-18.75rem);
+    transform: translateX(-1 * map-get($component-sizes, 'navigation-bar'));
+
   }
 }

@@ -21,6 +21,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  transition: map-get($speed, 'medium');
 
   // Hamburguer illustration
   span {
@@ -50,9 +51,8 @@
     }
   }
 
-  // Animation to make the X if it has the below class
-
-  &.open span {
+  // Animation to make the X if it has the close class
+  &.close span {
     background-color: map-get($ui-colors, 'accent');
 
     &::before {

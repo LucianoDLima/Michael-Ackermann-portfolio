@@ -4,6 +4,9 @@ $light-gray-blue: hsl(231, 7%, 68%);
 $light-blue: hsl(199, 83%, 47%);
 $white: hsl(0, 0%, 100%);
 
+// Shadows
+$shadow-light-blue: hsla(199, 83%, 47%, .15);
+
 // Color for the svgs
 $filter-lighter-gray-blue: invert(71%) sepia(0%) saturate(7216%)
   hue-rotate(325deg) brightness(93%) contrast(106%);
@@ -18,4 +21,8 @@ $ui-colors: (
   'accent': $light-blue,
   'svg-primary': $filter-lighter-gray-blue,
   'svg-accent': $filter-light-blue
+);
+
+$ui-shadow-color: (
+  'accent': $shadow-light-blue
 );

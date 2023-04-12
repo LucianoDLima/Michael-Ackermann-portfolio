@@ -143,6 +143,7 @@ header.hide {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  transition: 500ms;
 }
 .menu-button span {
   display: flex;
@@ -167,13 +168,13 @@ header.hide {
 .menu-button span::after {
   transform: translateY(0.375rem);
 }
-.menu-button.open span {
+.menu-button.close span {
   background-color: hsl(199deg, 83%, 47%);
 }
-.menu-button.open span::before {
+.menu-button.close span::before {
   transform: rotate(45deg);
 }
-.menu-button.open span::after {
+.menu-button.close span::after {
   transform: rotate(-45deg);
 }
 

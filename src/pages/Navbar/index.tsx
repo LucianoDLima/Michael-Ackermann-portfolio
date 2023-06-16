@@ -1,6 +1,6 @@
-import ProfileContainer from '../../components/ProfileContainer/ProfileContainer'
-import NavigationItems from '../../components/NavigationItems/NavigationItems'
-import SocialMedias from '../../components/SocialMedias/SocialMedias'
+import ProfileContainer from '../../components/ProfileContainer'
+import NavigationItems from '../../components/NavigationItems'
+import SocialMedias from '../../components/SocialMedias'
 
 interface Props {
   navBarHide: 'hide' | ''

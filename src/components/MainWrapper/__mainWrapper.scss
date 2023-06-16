@@ -4,6 +4,7 @@
 .mainWrapper {
   transition: map-get($speed, 'medium-fast');
   width: 100%;
+  padding-inline: map-get($min-gaps, '500');
 
   &.shrink {
     width: calc(100% - map-get($component-sizes, 'navigation-bar'));

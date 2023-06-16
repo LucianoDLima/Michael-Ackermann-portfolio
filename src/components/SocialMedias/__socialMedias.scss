@@ -12,8 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35px;
-    height: 35px;
+    width: map-get($med-gaps, '100');
+    height: map-get($med-gaps, '100');
     border-radius: 50%;
     background-color: map-get($ui-colors, 'secondary-background');
     position: relative;

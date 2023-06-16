@@ -96,8 +96,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35px;
-  height: 35px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   background-color: hsl(231deg, 18%, 21%);
   position: relative;
@@ -199,6 +199,7 @@ header.hide {
 .mainWrapper {
   transition: 350ms;
   width: 100%;
+  padding-inline: 1rem;
 }
 .mainWrapper.shrink {
   width: calc(100% - 18.75rem);

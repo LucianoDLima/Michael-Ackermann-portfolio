@@ -41,8 +41,8 @@ body {
 .profile__img-container img {
   object-fit: cover;
   position: relative;
-  left: -35px;
-  top: -21px;
+  left: -2.188rem;
+  top: -1.313rem;
   width: 150%;
   height: 150%;
 }

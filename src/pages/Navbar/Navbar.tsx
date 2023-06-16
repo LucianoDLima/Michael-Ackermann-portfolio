@@ -3,8 +3,8 @@ import NavigationItems from '../../components/NavigationItems/NavigationItems'
 import SocialMedias from '../../components/SocialMedias/SocialMedias'
 
 interface Props {
-  navBarHide: string
-  tabIndex: number
+  navBarHide: 'hide' | ''
+  tabIndex: -1 | 0
 }
 
 const Navbar = ({navBarHide, tabIndex}: Props) => {

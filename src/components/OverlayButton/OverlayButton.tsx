@@ -1,8 +1,8 @@
 import { MouseEventHandler } from 'react';
 
 interface OverlayButtonProps {
-  active?: string
-  btnType: string
+  active?: 'close' | ''
+  btnType: 'menu-button' | 'back-to-top'
   onClick?: MouseEventHandler
   icon?: string
 }

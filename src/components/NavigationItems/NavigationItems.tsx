@@ -5,16 +5,18 @@ import IconSkill from '../../assets/images/skill-icon.svg'
 import IconProject from '../../assets/images/project-icon.svg'
 import IconContact from '../../assets/images/contact-icon.svg'
 
+type PageNames = 'Home' | 'About' | 'Skills' | 'Publications' | 'Contact'
+
 interface Pages {
-  page: string,
+  page: PageNames,
   icon: string,
 }
 
-interface Props {
-  tabIndex: number
+interface NavigationItemsProps {
+  tabIndex: -1 | 0
 }
 
-const NavigationItems = ({tabIndex}: Props) => {
+const NavigationItems = ({tabIndex}: NavigationItemsProps) => {
 
   const pages: Pages[] = [
     {
@@ -40,7 +42,7 @@ const NavigationItems = ({tabIndex}: Props) => {
   ];
 
 
-  const pagesRender: JSX.Element[] = pages.map((page: Pages) => {
+  const pagesRender: React.ReactNode[] = pages.map((page: Pages) => {
     return (
       <li key={page.page} tabIndex={tabIndex}>
         <div className='page-navigation__icon' style={{background: `url('${page.icon}')`}}/>

@@ -1,9 +1,9 @@
-interface Props {
-  children: JSX.Element
-  shrinkWithNavbar: string
+interface MainWrapperProps {
+  children: React.ReactNode
+  shrinkWithNavbar: 'shrink' | ''
 }
 
-const MainWrapper = ({children, shrinkWithNavbar}: Props) => {
+const MainWrapper = ({children, shrinkWithNavbar}: MainWrapperProps) => {
   return (
     <main className={`mainWrapper ${shrinkWithNavbar}`}>{children}</main>
   )

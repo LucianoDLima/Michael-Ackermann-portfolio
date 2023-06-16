@@ -3,17 +3,19 @@ import LogoGH from '../../assets/images/github-logo.svg';
 import LogoRG from '../../assets/images/researchgate-logo.svg';
 import LogoLI from '../../assets/images/linkedin-logo.svg';
 
+type SocialMediaNames = 'Github' | 'Researchgate' | 'Linkedin'
+
 interface SocialMediaList {
-  name: string;
+  name: SocialMediaNames;
   image: string;
   link: string;
 }
 
-interface Props {
+interface SocialMediasProps {
   tabIndex: number
 }
 
-const SocialMedias = ({tabIndex}: Props) => {
+const SocialMedias = ({tabIndex}: SocialMediasProps) => {
   // Opens a new tab directing to the link
   const directToLink = (link: string): void => {
     window.open(link, '_blank');

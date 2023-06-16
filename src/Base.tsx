@@ -50,7 +50,7 @@ function Base() {
         active={isNavbarHidden ? '' : 'close'}
         onClick={() => hideNavigationBar()}
       />
-      <OverlayButton btnType={`back-to-top visible`} icon={ArrowIcon} />
+      <OverlayButton btnType={`back-to-top`} icon={ArrowIcon} />
 
       <Navbar
         navBarHide={isNavbarHidden ? 'hide' : ''}
